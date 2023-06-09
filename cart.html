@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/cartIcon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Корзина</title>
+</head>
+<body>
+    <div class="top__cart content">
+        <header class="header">
+            <a class="logo" href="index.html">
+                Интерьер.
+            </a>
+            <input placeholder="Поиск" class="top__input" type="text">
+            <nav class="menu">
+                <a href="catalog.html" class="catalog-link">Каталог</a>
+                <a href="cart.html" class="cart-link">Корзина</a>
+            </nav>
+        </header>
+        <div class="line"></div>
+            <h1 class="title"><a href="cart.html">Корзина</a> </h1>
+    </div>
+    <div class="cart content">
+        <div class="cart-list">
+            <div class="cart-list__heading">
+                <p>Товар</p>
+                <p>К-во</p>
+            </div>
+            <div class="cart-list__items">
+                <div class="cart-list__item">
+                    <img class="product__image" src="img/cartItemFirst.jpg" alt="table">
+                    <div class="cart-list__item-info">
+                        <h3 class="subtitle">
+                            <a href ="#" class="product__heading">Стол MENU</a>
+                        </h3>
+                        <p class="product-desc">Для того чтобы трапезничать было приятно, необходим правильный обеденный стол.</p>
+                        <p class="price">34 000 руб.</p>
+                        <div class="cart-links__box">
+                            <a href="#">Избранные</a>
+                            <a href="#">Удалить</a>
+                        </div>
+                    </div>
+                    <input type="number" placeholder="1" class="product-quantity">
+                </div>
+                <div class="cart-list__item">
+                    <img class="product__image" src="img/cartItemSecond.jpg" alt="sofa">
+                    <div class="cart-list__item-info">
+                        <h3 class="subtitle">
+                            <a href ="#" class="product__heading">Диван NASTAN</a>
+                        </h3>
+                        <p class="product-desc">Модель отличается простотой линий и форм, отсутствием броского декора. </p>
+                        <p class="price">80 000 руб.</p>
+                        <div class="cart-links__box">
+                            <a href="#">Избранные</a>
+                            <a href="#">Удалить</a>
+                        </div>
+                    </div>
+                    <input type="number" placeholder="1" class="product-quantity">
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="clear">Очистить корзину</button>
+                <button class="continue">Продолжить покупки</button>
+            </div>
+        </div>
+        <form class="buy-form">
+            <h3>Оформление заказа</h3>
+            <div class="inputs">
+                <input type="text" placeholder="Имя Фамилия">
+                <input type="tel" placeholder="+ 7 904 000 80 80">
+                <input type="text" placeholder="Адрес доставки">
+            </div>
+            
+            <span>Итого: <strong>128 000 руб.</strong> </span>
+            <button type="submit" class="submit-purchase">Оформить заказ</button>
+        </form>
+    </div>
+    <section class="specials content">
+        <h2 class="subtitle">Специальные предложения</h2>
+
+        <div class="product-content">
+            <div class="product-sample">
+                <img class="product__image" src="img/tatranbed.jpg" alt="bed">
+                <a href = "#" class="product__heading">Кровать TATRAN</a>
+                <p class="product-desc">Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.</p>
+                <div class="price-block">
+                    <span class="current-price">120 000 руб.</span>
+                    <span class="prev-price">140 000 руб.</span>
+                </div>
+            </div>
+            <div class="product-sample">
+                <img class="product__image" src="img/vilora.jpg" alt="chair">
+                <a href = "#" class="product__heading">Кресло VILORA</a>
+                <p class="product-desc">Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань. </p>
+                <div class="price-block">
+                    <span class="current-price">21 000 руб.</span>
+                    <span class="prev-price">28 000 руб.</span>
+                </div>
+            </div>
+            <div class="product-sample">
+                <img class="product__image" src="img/catalogMenutable.jpg" alt="table">
+                <a href = "#" class="product__heading">Стол MENU</a>
+                <p class="product-desc">Европейский дуб - отличается особой прочностью и стабильностью.</p>
+                <div class="price-block">
+                    <span class="current-price">34 000 руб.</span>
+                    <span class="prev-price">45 000 руб.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="footer content">
+        <a href="#" class="footer__heading">Интерьер.</a>
+        <section class="menu__box">
+            <h4 class="subtitle">Меню</h4>
+            <nav class="menu__links">
+                <a class="link" href="index.html">Главная</a>
+                <a class="link" href="catalog.html">Каталог</a>
+                <a class="link" href="cart.html">Корзина</a>
+            </nav>
+            
+        </section>
+        <section class="contacts__box">
+            <h4 class="subtitle">Контакты</h4>
+            <div class="contacts__links">
+                <a class="link" href="tel:+79088008080">+79088008080</a>
+                <a class="link" href="mailto:help@interier.com">help@interier.com</a>
+                <div class="social">
+                    <a href="#"><img src="img/inst.svg" alt="inst"></a> 
+                    <a href="#"><img src="img/twitter.svg" alt="twitter"></a>
+                    <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+                </div>
+                
+            </div>
+            
+        </section>
+        <div class="form__box">
+            <form action="#" class="form__content">
+                <p class="form-title">Получайте наши новости и обновления</p>
+                <input class="email-input" type="email" placeholder="example@gmail.com">
+                <button class='submit-btn' type="submit">Подписаться</button>
+            </form>
+        </div>
+        
+        
+    </footer>
+</body>
+</html>
