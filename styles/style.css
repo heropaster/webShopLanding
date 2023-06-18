@@ -764,8 +764,8 @@ h2.subtitle {
   .for__content {
     gap: 30px;
   }
-  .product-box .product-content {
-    gap: 30px;
+  .for__item {
+    height: 268px;
   }
   .footer__heading {
     display: none;
@@ -776,5 +776,14 @@ h2.subtitle {
   }
   .product-content {
     gap: 30px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 833px) {
+  .content {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .product-sample {
+    max-width: 345px;
   }
 }/*# sourceMappingURL=style.css.map */
