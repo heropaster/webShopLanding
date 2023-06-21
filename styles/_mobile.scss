@@ -6,6 +6,10 @@
   .line {
     display: none;
   }
+  .current-price,
+  .prev-price {
+    font-size: 18px !important;
+  }
   .top {
     height: 100vh;
     a.logo {
@@ -14,6 +18,7 @@
     .header {
       position: relative;
       padding-top: 50px;
+      padding-bottom: 0;
       .top__input {
         position: absolute;
         width: 20vw;
@@ -70,6 +75,8 @@
       text-align: center;
       .title {
         font-size: 48px;
+        line-height: 59px;
+        margin-top: 46px;
       }
       .catalog-link {
         font-size: 14px;
@@ -81,16 +88,197 @@
       font-size: 24px;
     }
     &__content {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 16px;
       .for__item {
+        grid-column: 1/4;
+        background-size: cover;
         a {
           font-size: 24px;
         }
       }
     }
   }
+  h2.subtitle {
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 36px;
+    width: 50vw;
+  }
+  .form__box {
+    margin: 48px auto 0 auto;
+  }
+
+  //catalog
+  .top__catalog {
+    height: 400px;
+    a.logo {
+      font-size: 18px;
+    }
+    .header {
+      position: relative;
+      padding-top: 50px;
+      padding-bottom: 0;
+      .top__input {
+        position: absolute;
+        width: 20vw;
+        display: none;
+        opacity: 0;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: $gap;
+        .mobile__btn {
+          display: block;
+          width: 19px;
+          height: 19px;
+        }
+        .btn__search {
+          border: none;
+          outline: none;
+          background: transparent;
+        }
+        .btn__search path {
+          transition: 0.15s ease-in;
+        }
+        .btn__search:active path {
+          fill: $active;
+          stroke: $active;
+        }
+        .btn__catalog-link {
+          background: url("../img/catalog.svg"), no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .btn__cart-link {
+          background: url("../img/cart.svg"), no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: 25px;
+          height: 25px;
+        }
+        .menu-link {
+          display: none;
+        }
+      }
+    }
+    :not(.header, .menu) {
+      text-align: center;
+    }
+    .title {
+      font-size: 48px;
+      margin-top: 46px;
+    }
+  }
+  .product-box__heading {
+    flex-direction: column;
+    gap: 27px;
+  }
+  //cart
+  .top__cart {
+    background-position: 70%;
+    height: 400px;
+    a.logo {
+      font-size: 18px;
+    }
+    .header {
+      position: relative;
+      padding-top: 50px;
+      padding-bottom: 0;
+      .top__input {
+        position: absolute;
+        width: 20vw;
+        display: none;
+        opacity: 0;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: $gap;
+        .mobile__btn {
+          display: block;
+          width: 19px;
+          height: 19px;
+        }
+        .btn__search {
+          border: none;
+          outline: none;
+          background: transparent;
+        }
+        .btn__search path {
+          transition: 0.15s ease-in;
+        }
+        .btn__search:active path {
+          fill: $active;
+          stroke: $active;
+        }
+        .btn__catalog-link {
+          background: url("../img/catalog.svg"), no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .btn__cart-link {
+          background: url("../img/cart.svg"), no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: 25px;
+          height: 25px;
+        }
+        .menu-link {
+          display: none;
+        }
+      }
+    }
+    :not(.header, .menu) {
+      text-align: center;
+    }
+    .title {
+      font-size: 48px;
+      margin-top: 99px;
+    }
+  }
+  .cart {
+    &-list {
+      width: 90vw;
+      img {
+        display: none;
+      }
+      &__item::before {
+        width: 90vw;
+      }
+    }
+    .buttons {
+      button {
+        font-size: 12px !important;
+        padding: 0 !important;
+      }
+    }
+    .buy-form {
+      width: 90vw;
+      .inputs {
+        input {
+          width: 80vw;
+        }
+      }
+      .submit-purchase {
+        width: 80vw;
+      }
+    }
+  }
 }
+@media (max-width: 340px) {
+  .top {
+    background-position: 39%;
+  }
+  .top__content .title {
+    font-size: 42px;
+  }
+  h2.subtitle {
+    width: unset;
+  }
+}
+
 // @keyframes searchUp {
 //   from {
 //     opacity: 0;
