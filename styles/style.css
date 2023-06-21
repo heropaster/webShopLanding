@@ -782,14 +782,24 @@ h2.subtitle {
   .line {
     display: none;
   }
+  .top {
+    height: 100vh;
+  }
   .top a.logo {
     font-size: 18px;
   }
   .top .header {
+    position: relative;
     padding-top: 50px;
   }
   .top .header .top__input {
+    position: absolute;
+    width: 20vw;
     display: none;
+    opacity: 0;
+  }
+  .top .header .top__input.mobile__shown {
+    display: block;
   }
   .top .header .menu {
     display: flex;
@@ -836,5 +846,15 @@ h2.subtitle {
   }
   .top__content .catalog-link {
     font-size: 14px;
+  }
+  .for .subtitle {
+    font-size: 24px;
+  }
+  .for__content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .for__content .for__item a {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=style.css.map */
