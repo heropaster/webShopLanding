@@ -1,0 +1,66 @@
+@media (max-width: 767px) {
+  .content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .line {
+    display: none;
+  }
+  .top {
+    a.logo {
+      font-size: 18px;
+    }
+    .header {
+      padding-top: 50px;
+      .top__input {
+        display: none;
+      }
+      .menu {
+        display: flex;
+        align-items: center;
+        gap: $gap;
+        .mobile__btn {
+          display: block;
+          width: 19px;
+          height: 19px;
+        }
+        .btn__search {
+          border: none;
+          outline: none;
+          background: transparent;
+        }
+        .btn__search path {
+          transition: 0.15s ease-in;
+        }
+        .btn__search:active path {
+          fill: $active;
+          stroke: $active;
+        }
+        .btn__catalog-link {
+          background: url("../img/catalog.svg"), no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+        .btn__cart-link {
+          background: url("../img/cart.svg"), no-repeat;
+          background-size: cover;
+          background-position: center;
+          width: 25px;
+          height: 25px;
+        }
+        .menu-link {
+          display: none;
+        }
+      }
+    }
+    &__content {
+      text-align: center;
+      .title {
+        font-size: 48px;
+      }
+      .catalog-link {
+        font-size: 14px;
+      }
+    }
+  }
+}
