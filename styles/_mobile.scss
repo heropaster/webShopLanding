@@ -10,6 +10,23 @@
   .prev-price {
     font-size: 18px !important;
   }
+  .header {
+    height: 57px !important;
+    box-sizing: border-box;
+  }
+  .footer {
+    margin-top: 32px;
+    padding-bottom: 0;
+    .submit-btn {
+      margin-bottom: 32px;
+    }
+  }
+  .product-box {
+    .product-sample {
+      width: 382px;
+    }
+  }
+
   .top {
     height: 100vh;
     a.logo {
@@ -92,18 +109,24 @@
       gap: 16px;
       .for__item {
         grid-column: 1/4;
+        height: 375px;
         background-size: cover;
         a {
           font-size: 24px;
         }
       }
+      .for__item_bigger {
+        height: 243px;
+      }
     }
+  }
+  .specials__subtitle {
+    width: 50vw;
   }
   h2.subtitle {
     font-size: 24px;
     line-height: 29px;
     margin-top: 36px;
-    width: 50vw;
   }
   .form__box {
     margin: 48px auto 0 auto;
@@ -173,7 +196,8 @@
   }
   .product-box__heading {
     flex-direction: column;
-    gap: 27px;
+    gap: 16px;
+    margin-bottom: 32px;
   }
   //cart
   .top__cart {

@@ -93,12 +93,6 @@ a:hover {
   line-height: 20px;
   color: #fff;
 }
-.top__input:-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #fff;
-}
 .top__input::placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -150,12 +144,6 @@ a:hover {
   box-sizing: border-box;
 }
 .top__cart__input::-moz-placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #fff;
-}
-.top__cart__input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -352,9 +340,6 @@ a:hover {
 .cart .buy-form .inputs input::-moz-placeholder {
   color: #000;
 }
-.cart .buy-form .inputs input:-ms-input-placeholder {
-  color: #000;
-}
 .cart .buy-form .inputs input::placeholder {
   color: #000;
 }
@@ -447,12 +432,6 @@ a:hover {
   box-sizing: border-box;
 }
 .top__catalog__input::-moz-placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  color: #fff;
-}
-.top__catalog__input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -745,9 +724,6 @@ h2.subtitle {
 .footer .email-input::-moz-placeholder {
   color: #c4c4c4;
 }
-.footer .email-input:-ms-input-placeholder {
-  color: #c4c4c4;
-}
 .footer .email-input::placeholder {
   color: #c4c4c4;
 }
@@ -810,8 +786,22 @@ h2.subtitle {
     display: none;
   }
   .current-price,
-.prev-price {
+  .prev-price {
     font-size: 18px !important;
+  }
+  .header {
+    height: 57px !important;
+    box-sizing: border-box;
+  }
+  .footer {
+    margin-top: 32px;
+    padding-bottom: 0;
+  }
+  .footer .submit-btn {
+    margin-bottom: 32px;
+  }
+  .product-box .product-sample {
+    width: 382px;
   }
   .top {
     height: 100vh;
@@ -890,16 +880,22 @@ h2.subtitle {
   }
   .for__content .for__item {
     grid-column: 1/4;
+    height: 375px;
     background-size: cover;
   }
   .for__content .for__item a {
     font-size: 24px;
   }
+  .for__content .for__item_bigger {
+    height: 243px;
+  }
+  .specials__subtitle {
+    width: 50vw;
+  }
   h2.subtitle {
     font-size: 24px;
     line-height: 29px;
     margin-top: 36px;
-    width: 50vw;
   }
   .form__box {
     margin: 48px auto 0 auto;
@@ -967,7 +963,8 @@ h2.subtitle {
   }
   .product-box__heading {
     flex-direction: column;
-    gap: 27px;
+    gap: 16px;
+    margin-bottom: 32px;
   }
   .top__cart {
     background-position: 70%;
