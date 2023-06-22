@@ -23,6 +23,10 @@ body {
 
 .header {
   align-items: center;
+  height: 76px;
+  padding: 16px 0 16px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .content {
@@ -93,17 +97,17 @@ a:hover {
   line-height: 20px;
   color: #fff;
 }
-.top__input::placeholder {
+.top__input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   color: #fff;
 }
-.top .header {
-  height: 76px;
-  padding: 16px 0 16px 0;
-  display: flex;
-  justify-content: space-between;
+.top__input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
 }
 .top__content {
   box-sizing: border-box;
@@ -144,6 +148,12 @@ a:hover {
   box-sizing: border-box;
 }
 .top__cart__input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+.top__cart__input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -340,6 +350,9 @@ a:hover {
 .cart .buy-form .inputs input::-moz-placeholder {
   color: #000;
 }
+.cart .buy-form .inputs input:-ms-input-placeholder {
+  color: #000;
+}
 .cart .buy-form .inputs input::placeholder {
   color: #000;
 }
@@ -432,6 +445,12 @@ a:hover {
   box-sizing: border-box;
 }
 .top__catalog__input::-moz-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+.top__catalog__input:-ms-input-placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -697,6 +716,7 @@ h2.subtitle {
   text-decoration: underline;
 }
 .footer .form__content {
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -722,6 +742,9 @@ h2.subtitle {
   color: #000;
 }
 .footer .email-input::-moz-placeholder {
+  color: #c4c4c4;
+}
+.footer .email-input:-ms-input-placeholder {
   color: #c4c4c4;
 }
 .footer .email-input::placeholder {
@@ -786,11 +809,11 @@ h2.subtitle {
     display: none;
   }
   .current-price,
-  .prev-price {
+.prev-price {
     font-size: 18px !important;
   }
   .header {
-    height: 57px !important;
+    height: 57px;
     box-sizing: border-box;
   }
   .footer {
@@ -811,7 +834,7 @@ h2.subtitle {
   }
   .top .header {
     position: relative;
-    padding-top: 50px;
+    padding-top: 32px;
     padding-bottom: 0;
   }
   .top .header .top__input {
@@ -908,7 +931,7 @@ h2.subtitle {
   }
   .top__catalog .header {
     position: relative;
-    padding-top: 50px;
+    padding-top: 32px;
     padding-bottom: 0;
   }
   .top__catalog .header .top__input {
@@ -975,7 +998,7 @@ h2.subtitle {
   }
   .top__cart .header {
     position: relative;
-    padding-top: 50px;
+    padding-top: 32px;
     padding-bottom: 0;
   }
   .top__cart .header .top__input {

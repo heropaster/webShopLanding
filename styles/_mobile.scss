@@ -11,7 +11,7 @@
     font-size: 18px !important;
   }
   .header {
-    height: 57px !important;
+    height: 57px;
     box-sizing: border-box;
   }
   .footer {
@@ -34,7 +34,7 @@
     }
     .header {
       position: relative;
-      padding-top: 50px;
+      padding-top: 32px;
       padding-bottom: 0;
       .top__input {
         position: absolute;
@@ -140,7 +140,7 @@
     }
     .header {
       position: relative;
-      padding-top: 50px;
+      padding-top: 32px;
       padding-bottom: 0;
       .top__input {
         position: absolute;
@@ -208,7 +208,7 @@
     }
     .header {
       position: relative;
-      padding-top: 50px;
+      padding-top: 32px;
       padding-bottom: 0;
       .top__input {
         position: absolute;

@@ -19,6 +19,10 @@ body {
 }
 .header {
   align-items: center;
+  height: 76px;
+  padding: 16px 0 16px 0;
+  display: flex;
+  justify-content: space-between;
 }
 .content {
   padding-left: calc(50% - 600px);
@@ -82,12 +86,6 @@ a:hover {
     font-size: 16px;
     line-height: 20px;
     color: $textColor;
-  }
-  .header {
-    height: 76px;
-    padding: 16px 0 16px 0;
-    display: flex;
-    justify-content: space-between;
   }
   &__content {
     box-sizing: border-box;
@@ -674,6 +672,7 @@ h2.subtitle {
     text-decoration: underline;
   }
   .form__content {
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: $linksGap;
