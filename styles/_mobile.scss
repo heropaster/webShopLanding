@@ -11,6 +11,9 @@
     font-size: 18px !important;
   }
   .header {
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 0;
     height: 57px;
     box-sizing: border-box;
   }
@@ -28,66 +31,62 @@
   }
 
   .top {
-    height: 100vh;
+    height: 735px;
     a.logo {
       font-size: 18px;
     }
-    .header {
-      position: relative;
-      padding-top: 32px;
-      padding-bottom: 0;
-      .top__input {
-        position: absolute;
-        width: 20vw;
-        display: none;
-        opacity: 0;
-      }
-      .top__input.mobile__shown {
+    .top__input {
+      position: absolute;
+      width: 20vw;
+      display: none;
+      opacity: 0;
+    }
+    .top__input.mobile__shown {
+      display: block;
+      // animation: searchUp 0.5s linear forwards;
+    }
+    // .top__input:not(.mobile__shown).mobile__hidden {
+    //   display: block;
+    //   animation: searchDown 0.5s linear forwards;
+    // }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: $gap;
+      .mobile__btn {
         display: block;
-        // animation: searchUp 0.5s linear forwards;
+        width: 19px;
+        height: 19px;
       }
-      // .top__input:not(.mobile__shown).mobile__hidden {
-      //   display: block;
-      //   animation: searchDown 0.5s linear forwards;
-      // }
-      .menu {
-        display: flex;
-        align-items: center;
-        gap: $gap;
-        .mobile__btn {
-          display: block;
-          width: 19px;
-          height: 19px;
-        }
-        .btn__search {
-          border: none;
-          outline: none;
-          background: transparent;
-        }
-        .btn__search path {
-          transition: 0.15s ease-in;
-        }
-        .btn__search:active path {
-          fill: $active;
-          stroke: $active;
-        }
-        .btn__catalog-link {
-          background: url("../img/catalog.svg"), no-repeat;
-          background-size: cover;
-          background-position: center;
-        }
-        .btn__cart-link {
-          background: url("../img/cart.svg"), no-repeat;
-          background-size: cover;
-          background-position: center;
-          width: 25px;
-          height: 25px;
-        }
-        .menu-link {
-          display: none;
-        }
+      .btn__search {
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+      .btn__search path {
+        transition: 0.15s ease-in;
+      }
+      .btn__search:active path {
+        fill: $active;
+        stroke: $active;
+      }
+      .btn__catalog-link {
+        background: url("../img/catalog.svg"), no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .btn__cart-link {
+        background: url("../img/cart.svg"), no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 25px;
+        height: 25px;
+      }
+      .menu-link {
+        display: none;
       }
     }
+
     &__content {
       text-align: center;
       .title {
@@ -138,62 +137,58 @@
     a.logo {
       font-size: 18px;
     }
-    .header {
-      position: relative;
-      padding-top: 32px;
-      padding-bottom: 0;
-      .top__input {
-        position: absolute;
-        width: 20vw;
+    .top__input {
+      position: absolute;
+      width: 20vw;
+      display: none;
+      opacity: 0;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: $gap;
+      .mobile__btn {
+        display: block;
+        width: 19px;
+        height: 19px;
+      }
+      .btn__search {
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+      .btn__search path {
+        transition: 0.15s ease-in;
+      }
+      .btn__search:active path {
+        fill: $active;
+        stroke: $active;
+      }
+      .btn__catalog-link {
+        background: url("../img/catalog.svg"), no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .btn__cart-link {
+        background: url("../img/cart.svg"), no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 25px;
+        height: 25px;
+      }
+      .menu-link {
         display: none;
-        opacity: 0;
       }
-      .menu {
-        display: flex;
-        align-items: center;
-        gap: $gap;
-        .mobile__btn {
-          display: block;
-          width: 19px;
-          height: 19px;
-        }
-        .btn__search {
-          border: none;
-          outline: none;
-          background: transparent;
-        }
-        .btn__search path {
-          transition: 0.15s ease-in;
-        }
-        .btn__search:active path {
-          fill: $active;
-          stroke: $active;
-        }
-        .btn__catalog-link {
-          background: url("../img/catalog.svg"), no-repeat;
-          background-size: cover;
-          background-position: center;
-        }
-        .btn__cart-link {
-          background: url("../img/cart.svg"), no-repeat;
-          background-size: cover;
-          background-position: center;
-          width: 25px;
-          height: 25px;
-        }
-        .menu-link {
-          display: none;
-        }
-      }
-    }
-    :not(.header, .menu) {
-      text-align: center;
-    }
-    .title {
-      font-size: 48px;
-      margin-top: 46px;
     }
   }
+  :not(.header, .menu) {
+    text-align: center;
+  }
+  .title {
+    font-size: 48px;
+    margin-top: 46px;
+  }
+
   .product-box__heading {
     flex-direction: column;
     gap: 16px;
@@ -206,61 +201,56 @@
     a.logo {
       font-size: 18px;
     }
-    .header {
-      position: relative;
-      padding-top: 32px;
-      padding-bottom: 0;
-      .top__input {
-        position: absolute;
-        width: 20vw;
+    .top__input {
+      position: absolute;
+      width: 20vw;
+      display: none;
+      opacity: 0;
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: $gap;
+      .mobile__btn {
+        display: block;
+        width: 19px;
+        height: 19px;
+      }
+      .btn__search {
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+      .btn__search path {
+        transition: 0.15s ease-in;
+      }
+      .btn__search:active path {
+        fill: $active;
+        stroke: $active;
+      }
+      .btn__catalog-link {
+        background: url("../img/catalog.svg"), no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .btn__cart-link {
+        background: url("../img/cart.svg"), no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 25px;
+        height: 25px;
+      }
+      .menu-link {
         display: none;
-        opacity: 0;
-      }
-      .menu {
-        display: flex;
-        align-items: center;
-        gap: $gap;
-        .mobile__btn {
-          display: block;
-          width: 19px;
-          height: 19px;
-        }
-        .btn__search {
-          border: none;
-          outline: none;
-          background: transparent;
-        }
-        .btn__search path {
-          transition: 0.15s ease-in;
-        }
-        .btn__search:active path {
-          fill: $active;
-          stroke: $active;
-        }
-        .btn__catalog-link {
-          background: url("../img/catalog.svg"), no-repeat;
-          background-size: cover;
-          background-position: center;
-        }
-        .btn__cart-link {
-          background: url("../img/cart.svg"), no-repeat;
-          background-size: cover;
-          background-position: center;
-          width: 25px;
-          height: 25px;
-        }
-        .menu-link {
-          display: none;
-        }
       }
     }
-    :not(.header, .menu) {
-      text-align: center;
-    }
-    .title {
-      font-size: 48px;
-      margin-top: 99px;
-    }
+  }
+  :not(.header, .menu) {
+    text-align: center;
+  }
+  .title {
+    font-size: 48px;
+    margin-top: 99px;
   }
   .cart {
     &-list {
