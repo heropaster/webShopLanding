@@ -292,6 +292,10 @@ html {
   overflow-x: hidden;
 }
 
+.mobile {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1115,6 +1119,70 @@ h2.subtitle {
     padding-left: calc(50% - 393px);
     padding-right: calc(50% - 393px);
   }
+  .searchBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: 0.4s all ease;
+    pointer-events: none;
+    z-index: 3;
+  }
+  .searchBg .searchPopup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    width: 90vw;
+    height: 60vh;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 10px;
+    transition: 0.4s all ease;
+  }
+  .searchBg .searchPopup h3 {
+    color: #000;
+  }
+  .searchBg .searchPopup .top__input_mobile {
+    width: 288px;
+    height: 41px;
+    opacity: 1;
+    display: block;
+    color: #726e6e;
+    border-color: #000;
+  }
+  .searchBg .searchPopup .search {
+    cursor: pointer;
+    width: 120px;
+    height: 45px;
+    background: #fff;
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 30px;
+    transition: 0.2s ease;
+  }
+  .searchBg .searchPopup .search :hover {
+    background: #000;
+    color: #fff;
+    border-color: #726e6e;
+  }
+  .searchBg .searchPopup.active {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.3s transform;
+    z-index: 100;
+  }
+  .searchBg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.3s all;
+  }
   .for__content {
     gap: 30px;
   }
@@ -1144,6 +1212,9 @@ h2.subtitle {
 @media (max-width: 767px) {
   .mobile__hidden {
     display: none;
+  }
+  .mobile {
+    display: unset;
   }
   .content {
     padding-left: 16px;
