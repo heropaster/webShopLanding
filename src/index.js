@@ -1,15 +1,15 @@
 const searchBtn = document.querySelector(".btn__search");
-const topInput = document.querySelector(".top__input");
+const searchPopupBg = document.querySelector(".searchBg.mobile");
+const searchPopup = document.querySelector(".searchPopup");
+const search = document.querySelector(".search");
 $(searchBtn).on("click", function () {
-  $(this).toggleClass("active");
-  $(topInput).toggleClass("mobile__hidden");
-  $(topInput).toggleClass("mobile__shown");
-  topInput.style.opacity = 1;
-  if ($(topInput).css("opacity") === "0") {
-    console.log(0);
-    $(topInput).animate("opacity", 1);
-  } else {
-    console.log(1);
-    $(topInput).animate("opacity", 0);
+  $(searchPopupBg).toggleClass("active");
+  $(searchPopup).toggleClass("active");
+});
+document.addEventListener("click", (e) => {
+  console.log(e.target);
+  if (e.target === searchPopupBg || e.target === search) {
+    searchPopupBg.classList.remove("active");
+    searchPopup.classList.remove("active");
   }
 });

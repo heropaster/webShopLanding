@@ -1,4 +1,7 @@
 @media (max-width: 767px) {
+  .mobile__hidden {
+    display: none;
+  }
   .content {
     padding-left: 16px;
     padding-right: 16px;
@@ -17,6 +20,70 @@
     height: 57px;
     box-sizing: border-box;
   }
+  .searchBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: 0.4s all ease;
+    pointer-events: none;
+    z-index: 3;
+    .searchPopup {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 25px;
+      width: 90vw;
+      height: 60vh;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      border-radius: 10px;
+      transition: 0.4s all ease;
+      h3 {
+        color: #000;
+      }
+      .top__input_mobile {
+        width: 288px;
+        height: 41px;
+        opacity: 1;
+        display: block;
+        color: #726e6e;
+        border-color: #000;
+      }
+      .search {
+        cursor: pointer;
+        width: 120px;
+        height: 45px;
+        background: #fff;
+        color: #000;
+        border: 2px solid #000;
+        border-radius: 30px;
+        transition: 0.2s ease;
+        :hover {
+          background: #000;
+          color: #fff;
+          border-color: #726e6e;
+        }
+      }
+    }
+    .searchPopup.active {
+      transform: translate(-50%, -50%) scale(1);
+      transition: 0.3s transform;
+      z-index: 100;
+    }
+  }
+  .searchBg.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.3s all;
+  }
   .footer {
     margin-top: 32px;
     padding-bottom: 0;
@@ -34,15 +101,6 @@
     height: 735px;
     a.logo {
       font-size: 18px;
-    }
-    .top__input {
-      position: absolute;
-      width: 20vw;
-      display: none;
-      opacity: 0;
-    }
-    .top__input.mobile__shown {
-      display: block;
     }
     .menu {
       display: flex;
@@ -133,10 +191,8 @@
       font-size: 18px;
     }
     .top__input {
-      position: absolute;
       width: 20vw;
       display: none;
-      opacity: 0;
     }
     .menu {
       display: flex;
@@ -176,7 +232,7 @@
       }
     }
   }
-  :not(.header, .menu) {
+  :not(.header, .menu, input) {
     text-align: center;
   }
   .title {
@@ -197,10 +253,8 @@
       font-size: 18px;
     }
     .top__input {
-      position: absolute;
       width: 20vw;
       display: none;
-      opacity: 0;
     }
     .menu {
       display: flex;
@@ -240,7 +294,7 @@
       }
     }
   }
-  :not(.header, .menu) {
+  :not(.header, .menu, input) {
     text-align: center;
   }
   .title {
