@@ -2,6 +2,9 @@
   .mobile__hidden {
     display: none;
   }
+  .title {
+    text-align: center;
+  }
   .mobile {
     display: unset;
   }
@@ -151,6 +154,7 @@
         margin-top: 46px;
       }
       .catalog-link {
+        margin-right: 0;
         font-size: 14px;
       }
     }
@@ -235,9 +239,7 @@
       }
     }
   }
-  :not(.header, .menu, input) {
-    text-align: center;
-  }
+
   .title {
     font-size: 48px;
     margin-top: 46px;
@@ -297,9 +299,7 @@
       }
     }
   }
-  :not(.header, .menu, input) {
-    text-align: center;
-  }
+
   .title {
     font-size: 48px;
     margin-top: 99px;
